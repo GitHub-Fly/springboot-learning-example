@@ -12,9 +12,10 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.1.RELEASE</version>
+        <version>1.5.14.RELEASE</version>
     </parent>
 
+    <!-- 注意学习这里版本号的集中配置管理方式 -->
     <properties>
         <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
         <mysql-connector>5.1.39</mysql-connector>
@@ -28,6 +29,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
             <version>${spring-boot-starter-redis-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>springboot</groupId>
+            <artifactId>springboot-mybatis-redis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <!-- Spring Boot Web 依赖 -->
@@ -57,11 +64,18 @@
             <version>${mysql-connector}</version>
         </dependency>
 
+        <!-- Spring Boot AOP 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
         <!-- Junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
     </dependencies>
 </project>

@@ -2,34 +2,15 @@ package org.spring.springboot.domain;
 
 import java.io.Serializable;
 
-/**
- * 城市实体类
- *
- * Created by bysocket on 07/02/2017.
- */
+// 城市实体类
 public class City implements Serializable {
 
     private static final long serialVersionUID = -1L;
 
-    /**
-     * 城市编号
-     */
-    private Long id;
-
-    /**
-     * 省份编号
-     */
-    private Long provinceId;
-
-    /**
-     * 城市名称
-     */
-    private String cityName;
-
-    /**
-     * 描述
-     */
-    private String description;
+    private Long id;                // 城市编号
+    private Long provinceId;        // 省份编号
+    private String cityName;        // 城市名称
+    private String description;     // 描述
 
     public Long getId() {
         return id;

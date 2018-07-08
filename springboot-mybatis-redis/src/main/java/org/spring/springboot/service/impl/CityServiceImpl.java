@@ -7,18 +7,12 @@ import org.spring.springboot.domain.City;
 import org.spring.springboot.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-/**
- * 城市业务逻辑实现类
- * <p>
- * Created by bysocket on 07/02/2017.
- */
+// 城市业务逻辑实现类
 @Service
 public class CityServiceImpl implements CityService {
 
@@ -53,7 +47,7 @@ public class CityServiceImpl implements CityService {
         City city = cityDao.findById(id);
 
         // 插入缓存
-        operations.set(key, city, 10, TimeUnit.SECONDS);
+        operations.set(key, city, 1000, TimeUnit.SECONDS);
         LOGGER.info("CityServiceImpl.findCityById() : 城市插入缓存 >> " + city.toString());
 
         return city;
